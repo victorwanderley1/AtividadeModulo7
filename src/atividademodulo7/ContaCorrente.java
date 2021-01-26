@@ -39,6 +39,8 @@ public class ContaCorrente extends Conta{
                     + "Valor atual: R$ " + this.getSaldo());
         }
         else System.out.println("Valor insuficiente!");
+        
+        System.out.printf("Saldo restante R$: %.2f", this.getSaldo());
     } 
     
     private void saqueComChequeEspecial(double valorSaque){

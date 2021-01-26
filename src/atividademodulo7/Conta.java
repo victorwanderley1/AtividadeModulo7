@@ -59,6 +59,8 @@ public abstract class Conta {
         return valorComparado >= 0;
     }
     
+    public abstract String saldoConta();
+    
     public Conta(String nomeBanco, double saldo, Integer numeroAgencia, Integer numeroConta) {
         this.nomeBanco = nomeBanco;
         this.saldo = saldo;

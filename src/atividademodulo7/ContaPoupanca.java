@@ -19,12 +19,15 @@ public class ContaPoupanca extends Conta {
     public double getSaldo() {
         return this.saldo + this.taxaDeJuros*saldo;
     }
+    
+    
 
     @Override
     public void saque(double valorSaque) {
-        this.saldo = this.getSaldo();
         if (valorSaque <= this.saldo){
-            this.saldo -= valorSaque;  
+            this.saldo -= valorSaque;
+            //Pode ser substituido por um método para imprimir o saldo fora da função 
+            System.out.printf("Saldo restante R$: %.2f", this.getSaldo());
         }
     }
     
