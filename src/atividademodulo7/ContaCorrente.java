@@ -64,4 +64,10 @@ public class ContaCorrente extends Conta{
     private void zerarSaldo(){
         this.saldo = 0;
     } 
+    
+    @Override
+    public String saldoConta(){
+        return "Saldo em conta: R$ "+this.saldo
+                +"\n Saldo cheque-especial"+this.saldoChequeEspecial;
+    }
 }

@@ -30,5 +30,10 @@ public class ContaPoupanca extends Conta {
             System.out.printf("Saldo restante R$: %.2f", this.getSaldo());
         }
     }
+
+    @Override
+    public String saldoConta() {
+        return "Saldo em conta: R$ "+this.getSaldo();
+    }
     
 }
