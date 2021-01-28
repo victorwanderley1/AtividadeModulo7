@@ -18,7 +18,7 @@ public class ContaCorrente extends Conta{
     
     @Override
     public String toString() {
-        return "ContaCorrente{" + "saldoChequeEspecial=" + saldoChequeEspecial + '}';
+        return super.toString()+saldoConta();
     }
 
     @Override
@@ -67,7 +67,7 @@ public class ContaCorrente extends Conta{
     
     @Override
     public String saldoConta(){
-        return "Saldo em conta: R$ "+this.saldo
-                +"\n Saldo cheque-especial"+this.saldoChequeEspecial;
+        return "\nSaldo em conta: R$ "+this.saldo
+                +"\nSaldo cheque-especial: R$ "+this.saldoChequeEspecial;
     }
 }

@@ -30,16 +30,25 @@ public class ContaSalario extends Conta{
             if (valorSaque <= this.getSaldo()){
                 this.setSaldo(this.getSaldo() - valorSaque);
                 this.saquesFeitos++;
+                //Pode ser substituido por um método para imprimir o saldo fora da função 
+                System.out.printf("Saldo restante R$: %.2f", this.getSaldo());
             }else System.out.println("Valor insuficiente!");
         }else System.out.println("Quantidade de saques excedida");
     }
 
     @Override
     public String saldoConta() {
-        return "Saldo em conta: R$ "+this.saldo;
+        return "\nSaldo em conta: R$ "+this.saldo;
     }
     
     public void limparQuantidadeDeSaques(){
         this.saquesFeitos = 0;
+    }
+    private String quantSaquesRestantes(){
+        return "\nQuantidade de Saques Restantes: "+String.valueOf(this.limiteSaques-this.saquesFeitos);
+    }
+    @Override
+    public String toString() {
+        return super.toString()+saldoConta()+quantSaquesRestantes();
     }
 }

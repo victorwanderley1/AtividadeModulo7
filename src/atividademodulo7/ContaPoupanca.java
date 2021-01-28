@@ -33,7 +33,11 @@ public class ContaPoupanca extends Conta {
 
     @Override
     public String saldoConta() {
-        return "Saldo em conta: R$ "+this.getSaldo();
+        return "\nSaldo em conta: R$ "+this.getSaldo();
     }
     
+    @Override
+    public String toString() {
+        return super.toString()+saldoConta();
+    }
 }

@@ -43,7 +43,9 @@ public abstract class Conta {
 
     @Override
     public String toString() {
-        return "Conta{" + "nomeBanco=" + nomeBanco + ", saldo=" + saldo + ", numeroAgencia=" + numeroAgencia + ", numeroConta=" + numeroConta + '}';
+        return   "\nBanco   -> "+nomeBanco
+                +"\nAgência -> "+numeroAgencia
+                +"\nConta   -> "+numeroConta;
     }
     
     public abstract void saque(double valorSaque);
